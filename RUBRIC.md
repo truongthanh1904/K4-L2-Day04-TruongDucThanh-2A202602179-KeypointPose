@@ -7,9 +7,9 @@
 | **Trái/phải và định danh người** | không có lỗi `dao_trai_phai`, không có lỗi `nham_nguoi` trong `outputs/eval_vs_gold.json` | 25 |
 | Cờ visibility | khớp bị che dùng `v = 1` **và vẫn có chấm**; `v = 0` chỉ dùng cho khớp ra ngoài khung; không dùng Hidden | 15 |
 | Độ chính xác vị trí | `OKS trung bình` và `OKS@0.75` trong `outputs/eval_vs_gold.json` | 10 |
-| Visibility report | `reports/visibility_report.md` + bản so với bạn cùng nhóm, có nhận xét khớp nào lệch nhiều nhất và vì sao | 10 |
+| Visibility report | `reports/visibility_report.md` + nhận xét tự kiểm khớp nào có tỷ lệ `v=1` cao nhất và vì sao | 10 |
 | Mini guideline | `GUIDELINE_MINI.md` nêu luật cho hông, cho tai bị tóc/mũ che, cho người bị cắt ở mép ảnh, và ít nhất ba ca mơ hồ có lý do | 13 |
-| Kiểm chéo | `reports/review_partner.md`: mỗi lỗi ghi rõ ảnh / người thứ mấy / khớp nào / lỗi gì / sửa thế nào, kèm reviewer checklist đã điền | 7 |
+| Tự kiểm chất lượng | `reports/REPORT.md` và `GUIDELINE_MINI.md` ghi rõ các lỗi gold, ca mơ hồ, và cách xử lý | 7 |
 
 ## Cổng bắt buộc
 

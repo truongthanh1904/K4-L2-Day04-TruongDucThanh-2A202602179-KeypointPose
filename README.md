@@ -52,8 +52,7 @@ Sau lab, bạn có thể:
 | `GUIDELINE_MINI.md` | luật cá nhân + ít nhất ba ca mơ hồ đã gặp và cách quyết |
 | `outputs/eval_vs_gold.json` | kết quả chấm với gold (sau khi protected release mở) |
 | `outputs/eval_model.json` | số liệu model trước/sau fine-tune, từ notebook |
-| `reports/REPORT.md` | báo cáo, điền từ `reports/REPORT_TEMPLATE.md` |
-| `reports/REPORT.md` | báo cáo kết quả cá nhân và các việc còn lại trước khi nộp |
+| `reports/REPORT.md` | báo cáo kết quả cá nhân, điền từ `reports/REPORT_TEMPLATE.md` |
 
 Đọc [GUIDE.md](GUIDE.md) theo thứ tự thao tác và đối chiếu [RUBRIC.md](RUBRIC.md) trước khi nộp.
 
@@ -63,13 +62,13 @@ Sau lab, bạn có thể:
 Day4-Lab/
   dataset/images/train/   20 ảnh - BÀI CHÍNH, không có nhãn khi pull
   dataset/images/test/    10 ảnh - có nhãn sẵn, dùng để đánh giá model
-  dataset/labels/train/   nhãn của bạn đặt ở đây (đang trống)
+  dataset/labels/train/   nhãn 20 ảnh train của bạn
   dataset/labels/test/    nhãn phát sẵn - KHÔNG sửa, KHÔNG dùng để train
   gold/                   trống; protected release đặt gold của train ở đây tại mốc 2:30
   annotations/            bản export gốc COCO Keypoints của 20 ảnh core
   tools/                  check / visibility / evaluate / visualize / convert
   notebooks/              notebook Colab: fine-tune YOLO26-Pose + đánh giá
-  reports/                mẫu báo cáo và reviewer checklist
+  reports/                báo cáo và visibility report
   outputs/                kết quả chấm, kết quả model
   data.yaml               cấu hình dataset cho Ultralytics (kpt_shape [17, 3])
 ```
