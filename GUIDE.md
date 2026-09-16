@@ -8,7 +8,7 @@ sau khi cả lớp đã khoá nhãn.
 | 0:00-0:20 | 1 | Dựng skeleton label, tạo task CVAT |
 | 0:20-0:40 | 2 | Warm-up: gán 2 ảnh, tự soi bằng `visualize_pose.py` |
 | 0:40-2:10 | 3 | Gán 18 ảnh core còn lại |
-| 2:10-2:30 | 4 | Ba lượt kiểm, visibility report, kiểm chéo, **khoá nhãn** |
+| 2:10-2:30 | 4 | Ba lượt kiểm, visibility report, **khoá nhãn** |
 | 2:30-3:10 | 5 | Nhận gold, chấm bằng OKS, rework |
 | 3:10-3:50 | 6 | Colab: fine-tune, visualize, đánh giá |
 | 3:50-4:00 | 7 | Báo cáo, commit, push |
@@ -113,7 +113,7 @@ Luật bắt buộc:
 4. **Người quá nhỏ**: bộ ảnh này đã được chọn sao cho mọi người trong ảnh đều đủ lớn để gán.
    Nếu bạn thấy một ca mình phân vân, đó là một ca mơ hồ thật - ghi vào `GUIDELINE_MINI.md`.
 5. **Hông**: không nhìn thấy được trên bất kỳ người mặc quần áo nào. Nó là ước lượng giải phẫu.
-   Nhóm bạn phải thống nhất một luật và ghi vào `GUIDELINE_MINI.md`, kèm một ảnh mẫu.
+   Bạn phải chọn một luật và ghi vào `GUIDELINE_MINI.md`, kèm một ảnh mẫu nếu có.
 
 ## Chặng 4 - Ba lượt kiểm rồi khoá nhãn (2:10-2:30)
 
@@ -144,16 +144,9 @@ một khớp `v = 1` nào, hoặc một người nằm gọn giữa ảnh mà l�
 **Lượt 3 - phóng to (chỉ vài người mẫu).** Zoom 200%, chọn 2-3 người. Bắt: chấm lệch khỏi khớp.
 Đây là lượt đắt nhất nên làm cuối cùng và làm ít.
 
-**Kiểm chéo với bạn cùng nhóm - so bảng đếm TRƯỚC, so hình sau:**
-
-```bash
-python3 tools/visibility_report.py --labels dataset/labels/train \
-    --compare ../ban_cung_nhom/dataset/labels/train --markdown reports/visibility_compare.md
-```
-
-Khớp nào lệch `%v=1` nhiều nhất là khớp guideline của nhóm chưa nói rõ. Sửa guideline
-trước, sửa nhãn sau. Điền `reports/REVIEWER_CHECKLIST.md` cho bài của người kia và ghi
-lỗi tìm được vào `reports/review_partner.md`.
+Với bài cá nhân, bỏ qua bước kiểm chéo. Thay vào đó, lưu lại các ca mơ hồ
+và cách quyết trong `GUIDELINE_MINI.md`, rồi tự kiểm lại bằng visibility report và ảnh
+visualize trước khi khoá nhãn.
 
 **Khoá nhãn.** Commit. Từ đây trở đi không sửa nhãn nữa cho tới khi nhận gold.
 

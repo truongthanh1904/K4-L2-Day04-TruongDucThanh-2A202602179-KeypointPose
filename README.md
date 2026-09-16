@@ -49,11 +49,11 @@ Sau lab, bạn có thể:
 | `dataset/labels/train/*.txt` | nhãn 20 ảnh train, định dạng Ultralytics YOLO Pose (56 số/dòng) |
 | `annotations/coco_keypoints/person_keypoints_default.json` | đúng bản export **COCO Keypoints 1.0** từ CVAT |
 | `reports/visibility_report.md`, `outputs/visibility_report.json` | bảng đếm cờ theo từng khớp |
-| `GUIDELINE_MINI.md` | luật của nhóm bạn + ít nhất ba ca mơ hồ đã gặp và cách quyết |
+| `GUIDELINE_MINI.md` | luật cá nhân + ít nhất ba ca mơ hồ đã gặp và cách quyết |
 | `outputs/eval_vs_gold.json` | kết quả chấm với gold (sau khi protected release mở) |
 | `outputs/eval_model.json` | số liệu model trước/sau fine-tune, từ notebook |
 | `reports/REPORT.md` | báo cáo, điền từ `reports/REPORT_TEMPLATE.md` |
-| `reports/review_partner.md` | lỗi tìm được trong bài người khác + reviewer checklist đã điền |
+| `reports/REPORT.md` | báo cáo kết quả cá nhân và các việc còn lại trước khi nộp |
 
 Đọc [GUIDE.md](GUIDE.md) theo thứ tự thao tác và đối chiếu [RUBRIC.md](RUBRIC.md) trước khi nộp.
 
@@ -99,9 +99,9 @@ python3 tools/visualize_pose.py --images dataset/images/train \
 python3 tools/visibility_report.py --labels dataset/labels/train \
     --out outputs/visibility_report.json --markdown reports/visibility_report.md
 
-# 5. Kiểm chéo: so bảng đếm của bạn với của bạn cùng nhóm
+# 5. Tự kiểm visibility report; bài cá nhân không cần kiểm chéo
 python3 tools/visibility_report.py --labels dataset/labels/train \
-    --compare ../ban_cung_nhom/dataset/labels/train --markdown reports/visibility_compare.md
+  --out outputs/visibility_report.json --markdown reports/visibility_report.md
 
 # 6. Chấm với gold - CHỈ chạy sau khi protected release mở
 python3 tools/evaluate_pose_annotations.py --pred dataset/labels/train \

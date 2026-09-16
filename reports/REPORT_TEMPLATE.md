@@ -1,6 +1,6 @@
 # Báo cáo Ngày 4 - Keypoint & Pose
 
-Họ tên: ______   Nhóm: ______   Ngày: ______
+Họ tên: ______   Ngày: ______
 
 > Cách dùng: copy file này thành `reports/REPORT.md`. Điền bằng số liệu do công cụ sinh ra;
 > không tự ước lượng hoặc sửa số trong file JSON.
@@ -59,9 +59,7 @@ bạn nghĩ vì sao mình vẫn sai?
 
 ## 3. Kiểm chéo
 
-Bạn cùng nhóm: ______
-
-Khớp lệch `%v=1` nhiều nhất giữa hai bảng đếm:
+Khớp có `%v=1` cao nhất trong bảng đếm của bạn:
 
 | Khớp | Bạn | Họ | Lệch | Nguyên nhân (guideline hay gán sai?) |
 | --- | ---: | ---: | ---: | --- |
